@@ -62,18 +62,66 @@
 		7E306BE4257E662C0097EA64 /* Trips */ = {
 			isa = PBXGroup;
 			children = (
-				7E306BE5257E662C0097EA64 /* AppDelegate.swift */,
-				7E306BE7257E662C0097EA64 /* SceneDelegate.swift */,
-				7E306BE9257E662C0097EA64 /* ViewController.swift */,
-				7E32A0FB257E88CD0085C76E /* ViagemDAO.swift */,
-				7E32A0FE257E957F0085C76E /* TableViewCell.swift */,
-				7E32A0F8257E874C0085C76E /* Viagem.swift */,
+				7E32A102257EA0C50085C76E /* Model */,
+				7E32A103257EA0CB0085C76E /* Home */,
+				7E32A106257EA0E30085C76E /* ViagemDAO */,
+				7E32A108257EA8700085C76E /* Supports */,
 				7E306BEB257E662C0097EA64 /* Main.storyboard */,
 				7E306BEE257E66330097EA64 /* Assets.xcassets */,
 				7E306BF0257E66330097EA64 /* LaunchScreen.storyboard */,
 				7E306BF3257E66330097EA64 /* Info.plist */,
 			);
 			path = Trips;
+			sourceTree = "<group>";
+		};
+		7E32A102257EA0C50085C76E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E32A0F8257E874C0085C76E /* Viagem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E32A103257EA0CB0085C76E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7E32A104257EA0D10085C76E /* Controller */,
+				7E32A105257EA0D60085C76E /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7E32A104257EA0D10085C76E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7E306BE9257E662C0097EA64 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7E32A105257EA0D60085C76E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E32A0FE257E957F0085C76E /* TableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7E32A106257EA0E30085C76E /* ViagemDAO */ = {
+			isa = PBXGroup;
+			children = (
+				7E32A0FB257E88CD0085C76E /* ViagemDAO.swift */,
+			);
+			path = ViagemDAO;
+			sourceTree = "<group>";
+		};
+		7E32A108257EA8700085C76E /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				7E306BE5257E662C0097EA64 /* AppDelegate.swift */,
+				7E306BE7257E662C0097EA64 /* SceneDelegate.swift */,
+			);
+			path = Supports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

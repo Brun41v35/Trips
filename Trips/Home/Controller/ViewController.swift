@@ -40,6 +40,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.labelDays.text = "\(currentTrip.days)"
         cell.labelPrice.text = currentTrip.price
         cell.imageTrip.image = UIImage(named: currentTrip.journeyPath)
+        cell.imageTrip.layer.cornerRadius = 10
+        cell.imageTrip.layer.masksToBounds = true
         
         return cell
     }
