@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         cell.labelName.text = currentTrip.nameTrip
         cell.labelDays.text = "\(currentTrip.days)"
-        cell.labelPrice.text = currentTrip.price
+        cell.labelPrice.text = "R$ \(currentTrip.price)"
         cell.imageTrip.image = UIImage(named: currentTrip.journeyPath)
         cell.imageTrip.layer.cornerRadius = 10
         cell.imageTrip.layer.masksToBounds = true
@@ -47,7 +47,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 175
+        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? 175 : 260
     }
 }
 
