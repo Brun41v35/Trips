@@ -77,13 +77,46 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="93" id="q0Z-1Z-44C">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="93"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="175" id="q0Z-1Z-44C" customClass="TableViewCell" customModule="Trips" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q0Z-1Z-44C" id="xhs-jR-ZRf">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLE-6L-5wa">
+                                                    <rect key="frame" x="16" y="0.0" width="215" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S85-Qg-Eal">
+                                                    <rect key="frame" x="16" y="151" width="144" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1b-la-TMw">
+                                                    <rect key="frame" x="168" y="151" width="136" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rEe-2c-jn9">
+                                                    <rect key="frame" x="16" y="25" width="288" height="125"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageTrip" destination="rEe-2c-jn9" id="MbK-Zz-CDd"/>
+                                            <outlet property="labelDays" destination="S85-Qg-Eal" id="LRc-f5-f1T"/>
+                                            <outlet property="labelName" destination="qLE-6L-5wa" id="iG4-wy-2B2"/>
+                                            <outlet property="labelPrice" destination="A1b-la-TMw" id="OYr-ce-tgt"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -93,11 +126,13 @@
                     </view>
                     <connections>
                         <outlet property="tableTrips" destination="P0g-gG-tzh" id="YPH-9S-5xh"/>
+                        <outlet property="viewHoteis" destination="NLu-y2-oBo" id="7Jq-VX-q7d"/>
+                        <outlet property="viewPackage" destination="0v0-IP-KzT" id="KEq-Zd-1l1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1046.25" y="-41.197183098591552"/>
+            <point key="canvasLocation" x="-1458.75" y="-31.690140845070424"/>
         </scene>
     </scenes>
     <resources>

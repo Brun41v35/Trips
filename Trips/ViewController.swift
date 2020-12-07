@@ -7,18 +7,23 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - IBOutlets
     @IBOutlet weak var tableTrips: UITableView!
+    @IBOutlet weak var viewHoteis: UIView!
+    @IBOutlet weak var viewPackage: UIView!
     
     //MARK: - Variaveis
-    var listCity: Array<String> = ["Rio de Janeiro", "Ceara", "São Paulo"]
+    var listCity: Array<Viagem> = ViagemDAO().returnAllTrips()
     
     //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableTrips.dataSource = self
+        self.tableTrips.delegate = self
+        self.viewHoteis.layer.cornerRadius = 10
+        self.viewPackage.layer.cornerRadius = 10
     }
     
     //MARK: - Table View Methods
@@ -28,10 +33,19 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = listCity[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        let currentTrip = listCity[indexPath.row]
+        
+        cell.labelName.text = currentTrip.nameTrip
+        cell.labelDays.text = "\(currentTrip.days)"
+        cell.labelPrice.text = currentTrip.price
+        cell.imageTrip.image = UIImage(named: currentTrip.journeyPath)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 175
     }
 }
 
